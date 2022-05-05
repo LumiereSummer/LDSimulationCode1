@@ -356,8 +356,8 @@ patoolib.extract_archive("IMAGES.rar", outdir="/IMAGES/")
 
 
 
-dspath="/root/LDSimulation/LowDoseSimulation/IMAGES/"
-csvpath="/root/LDSimulation/LowDoseSimulation/paras_TestLD.csv"
+dspath="/home/lxia/LDSimulation/LowDoseSimulation/IMAGES/"
+csvpath="/home/lxia/LDSimulation/LowDoseSimulation/paras_TestLD.csv"
   
        
 df=pd.read_csv(csvpath,sep=' ')
@@ -374,10 +374,10 @@ imgs120_test,imgs80_test=readimg(df120,df80,dspath,"midastinum",0.2)
 model = generator(10)
 model.compile(optimizer=Adam(learning_rate=0.01), loss=MeanAbsoluteError(), metrics=['accuracy'])
 
-csvlogger_path = "/root/LDSimulation/DL/csvlogger/"
+csvlogger_path = "/home/lxia/LDSimulation/DL/csvlogger/"
 csv_logger = CSVLogger(csvlogger_path+'model_rb10_l1_adam001_training.csv')
 
-checkpoint_path = "/root/LDSimulation/DL/checkpoint/"
+checkpoint_path = "/home/lxia/LDSimulation/DL/checkpoint/"
 if not os.path.exists(checkpoint_path):
     os.makedirs(checkpoint_path)
 
@@ -409,7 +409,7 @@ hist = model.fit(imgs120_train,
 
 
 
-performance_path= "/root/LDSimulation/DL/performance/"
+performance_path= "/home/lxia/LDSimulation/DL/performance/"
 if not os.path.exists(performance_path):
     os.makedirs(performance_path)
     
