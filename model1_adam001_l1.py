@@ -36,18 +36,18 @@ import pydicom as dicom
 from pydicom.pixel_data_handlers.util import apply_modality_lut
 
 from PIL import Image
-import plotly
-import vtk
-
-import patoolib
+#import plotly
+#import vtk
+#import patoolib
 
 
 
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import Layer, Dense, Flatten, Dropout, Resizing, Reshape, Input, concatenate, add
+from tensorflow.keras.layers import Layer, Dense, Flatten, Dropout, Reshape, Input, concatenate, add
 from tensorflow.keras.layers import LeakyReLU, Conv2D, MaxPool2D, GlobalAvgPool2D, BatchNormalization, Conv2DTranspose
+from tensorflow.keras.layers.experimental.preprocessing import Resizing
 
 from tensorflow.keras.losses import categorical_crossentropy, sparse_categorical_crossentropy
 from tensorflow.keras.losses import MeanAbsoluteError, MeanSquaredError 
